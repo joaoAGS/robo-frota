@@ -22,4 +22,4 @@ ENV CHROME_BIN=/usr/bin/google-chrome
 ENV PORT=5000
 
 # Comando que inicia o robô automaticamente
-CMD ["python", "-u", "testecomandos.py", "--modo-robo"]
+CMD ["python", "-u", "main.py", "--modo-robo"]
