@@ -594,7 +594,9 @@ def receber_mensagem():
     return jsonify({"status": "ok"}), 200
 
 def rodar_servidor():
-    app.run(host='0.0.0.0', port=5000, use_reloader=False)
+    # O Easypanel define a porta na variável de ambiente PORT
+    port_number = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port_number, use_reloader=False)
  
 # ==============================================================================
 # 🚀 LOOP PRINCIPAL
