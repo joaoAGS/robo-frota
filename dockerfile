@@ -15,7 +15,7 @@ WORKDIR /app
 # Copia seus arquivos e instala as bibliotecas
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-COPY testecomandos.py .
+COPY main.py .
 
 # Configurações para o Chrome não travar
 ENV CHROME_BIN=/usr/bin/google-chrome
